@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+langgraph
+langchain-core
+boto3
+openai
+sqlalchemy
+psycopg2-binary
+pydantic
+pydantic-settings
+python-dotenv
+pytest

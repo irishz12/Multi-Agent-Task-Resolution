@@ -1,0 +1,300 @@
+[
+  {
+    "id": "SC-001",
+    "category": "damaged_order_valid_refund",
+    "customer_id": 9001,
+    "message": "My wireless earbuds from order 9101 arrived broken, please refund me.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "REFUND",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-002",
+    "category": "damaged_order_valid_replacement",
+    "customer_id": 9001,
+    "message": "My wireless earbuds from order 9101 arrived broken, please send me a replacement instead of a refund.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "REPLACEMENT",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-003",
+    "category": "damaged_order_valid_refund",
+    "customer_id": 9002,
+    "message": "The blender from order 9102 arrived damaged, I'd like my money back.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "REFUND",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-004",
+    "category": "damaged_order_valid_replacement",
+    "customer_id": 9002,
+    "message": "The blender from order 9102 arrived damaged, can you send a new one instead of refunding?",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "REPLACEMENT",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-005",
+    "category": "damaged_order_outside_window",
+    "customer_id": 9003,
+    "message": "My ceramic vase from order 9103 arrived cracked a while back, I want a refund.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-006",
+    "category": "damaged_order_outside_window",
+    "customer_id": 9003,
+    "message": "The vase from order 9103 you sent me was smashed, please replace it.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-007",
+    "category": "damaged_order_missing_order",
+    "customer_id": 9001,
+    "message": "My headphones arrived damaged.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-008",
+    "category": "damaged_order_missing_order",
+    "customer_id": 9002,
+    "message": "Something I ordered was damaged when it arrived, not sure of the order number.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-009",
+    "category": "damaged_order_missing_order",
+    "customer_id": 9004,
+    "message": "My package arrived damaged, order number 999999.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-010",
+    "category": "damaged_order_missing_order",
+    "customer_id": 9007,
+    "message": "The item I got was broken and I don't remember the order number.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-011",
+    "category": "wrong_item_valid_replacement",
+    "customer_id": 9004,
+    "message": "I ordered a laptop stand, order 9104, but received a phone stand instead, please send the correct item.",
+    "expected_issue_type": "wrong_item",
+    "expected_resolution": "REPLACEMENT",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-012",
+    "category": "wrong_item_valid_replacement",
+    "customer_id": 9005,
+    "message": "I ordered sneakers, order 9105, but got sandals, can you replace it with the right item?",
+    "expected_issue_type": "wrong_item",
+    "expected_resolution": "REPLACEMENT",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-013",
+    "category": "wrong_item_valid_replacement",
+    "customer_id": 9004,
+    "message": "I got the wrong item, my laptop stand order 9104 came with a phone stand, please send the correct one.",
+    "expected_issue_type": "wrong_item",
+    "expected_resolution": "REPLACEMENT",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-014",
+    "category": "wrong_item_wrong_customer",
+    "customer_id": 9002,
+    "message": "I ordered a laptop stand but received a phone stand instead, please replace order 9104.",
+    "expected_issue_type": "wrong_item",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-015",
+    "category": "wrong_item_wrong_customer",
+    "customer_id": 9005,
+    "message": "My monitor order, order 9106, came with a keyboard instead, please fix this.",
+    "expected_issue_type": "wrong_item",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-016",
+    "category": "wrong_item_outside_window",
+    "customer_id": 9006,
+    "message": "I ordered a monitor, order 9106, and got a keyboard, this happened a while back, please replace it.",
+    "expected_issue_type": "wrong_item",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-017",
+    "category": "wrong_item_outside_window",
+    "customer_id": 9006,
+    "message": "The wrong item I received, order 9106, arrived a long time ago, please send the correct one now.",
+    "expected_issue_type": "wrong_item",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-018",
+    "category": "wrong_item_disallowed_action",
+    "customer_id": 9005,
+    "message": "I received sandals instead of the sneakers I ordered, order 9105, please refund me instead of replacing them.",
+    "expected_issue_type": "wrong_item",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-019",
+    "category": "missing_delivery_valid_refund",
+    "customer_id": 9007,
+    "message": "My package from order 9107 never arrived, it's been over a week, please refund me.",
+    "expected_issue_type": "missing_delivery",
+    "expected_resolution": "REFUND",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-020",
+    "category": "missing_delivery_valid_refund",
+    "customer_id": 9008,
+    "message": "I never received my order, order 9108, please issue a refund.",
+    "expected_issue_type": "missing_delivery",
+    "expected_resolution": "REFUND",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-021",
+    "category": "missing_delivery_valid_refund",
+    "customer_id": 9007,
+    "message": "My delivery for order 9107 seems lost, can you refund me please.",
+    "expected_issue_type": "missing_delivery",
+    "expected_resolution": "REFUND",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-022",
+    "category": "missing_delivery_invalid_order",
+    "customer_id": 9007,
+    "message": "My order never showed up, order number is 999999.",
+    "expected_issue_type": "missing_delivery",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-023",
+    "category": "missing_delivery_invalid_order",
+    "customer_id": 9008,
+    "message": "My package is missing, I think the order number was 888888.",
+    "expected_issue_type": "missing_delivery",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-024",
+    "category": "missing_delivery_already_resolved",
+    "case_id": 9501,
+    "customer_id": 9007,
+    "message": "Following up again about my missing package from order 9107, please refund me.",
+    "expected_issue_type": "missing_delivery",
+    "expected_resolution": "REFUND",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-025",
+    "category": "missing_delivery_valid_refund",
+    "customer_id": 9008,
+    "message": "I ordered something, order 9108, a while ago and it still hasn't shown up, please refund it.",
+    "expected_issue_type": "missing_delivery",
+    "expected_resolution": "REFUND",
+    "expected_status": "resolved"
+  },
+  {
+    "id": "SC-026",
+    "category": "unsupported_request",
+    "customer_id": 9009,
+    "message": "Can I get a discount code for my next order?",
+    "expected_issue_type": null,
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-027",
+    "category": "unsupported_request",
+    "customer_id": 9010,
+    "message": "Hi, I have a question about my account settings.",
+    "expected_issue_type": null,
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-028",
+    "category": "incomplete_information",
+    "customer_id": 9001,
+    "message": "Something's wrong with my order.",
+    "expected_issue_type": null,
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-029",
+    "category": "incomplete_information",
+    "customer_id": 9003,
+    "message": "I'm not happy with my recent purchase.",
+    "expected_issue_type": null,
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-030",
+    "category": "invalid_customer",
+    "customer_id": 99999,
+    "message": "My order arrived damaged, please refund me.",
+    "expected_issue_type": "damaged_order",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-031",
+    "category": "invalid_customer",
+    "customer_id": 88888,
+    "message": "I never got my package, please refund me.",
+    "expected_issue_type": "missing_delivery",
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-032",
+    "category": "incomplete_information",
+    "customer_id": 9002,
+    "message": "Just checking in, nothing specific to report.",
+    "expected_issue_type": null,
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  },
+  {
+    "id": "SC-033",
+    "category": "unsupported_request",
+    "customer_id": 9004,
+    "message": "I want to complain about customer service, not about a product.",
+    "expected_issue_type": null,
+    "expected_resolution": "ESCALATE",
+    "expected_status": "escalated"
+  }
+]
