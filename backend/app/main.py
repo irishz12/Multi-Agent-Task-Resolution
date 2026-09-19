@@ -22,7 +22,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="agentflow-support", lifespan=lifespan)
+app = FastAPI(title="Multi-Agent Task Resolution", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
@@ -49,4 +49,4 @@ def health(db: Session = Depends(get_db)):
         pass
 
     status = "ok" if all(checks.values()) else "degraded"
-    return {"status": status, "service": "agentflow-support", "checks": checks}
+    return {"status": status, "service": "multi-agent-task-resolution", "checks": checks}

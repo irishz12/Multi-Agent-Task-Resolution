@@ -1,12 +1,12 @@
-# AgentFlow Support
+# Multi-Agent Task Resolution
 
 A multi-agent AI customer resolution system built with LangGraph, Amazon Bedrock Mantle, FastAPI, and PostgreSQL.
 
 ## Demo
 
-![AgentFlow Support Demo](docs/demo-damaged-order.png)
+![Multi-Agent Task Resolution Demo](docs/demo-damaged-order.png)
 
-AgentFlow Support uses LangGraph to orchestrate a Planner Agent, an Investigation Agent, a deterministic Reflection Gate, and a Resolution Agent — with deterministic tools, policy validation, action execution, and verification enforcing every business rule.
+Multi-Agent Task Resolution uses LangGraph to orchestrate a Planner Agent, an Investigation Agent, a deterministic Reflection Gate, and a Resolution Agent — with deterministic tools, policy validation, action execution, and verification enforcing every business rule.
 
 | Wrong item delivered | Escalation case |
 |---|---|
@@ -16,13 +16,13 @@ AgentFlow Support uses LangGraph to orchestrate a Planner Agent, an Investigatio
 
 Customer support teams spend a large share of their time on a small set of repetitive, well-defined issues — a damaged order, a delivery that never arrived, the wrong item showing up. Each of these follows a predictable pattern: understand what happened, check what the order and policy actually allow, and either resolve it or hand it to a human. Handling these manually doesn't scale, but resolving them with a single opaque LLM call is risky — a support agent can't be allowed to hallucinate a refund a policy doesn't permit.
 
-AgentFlow Support automates exactly these three issue types end to end, using LLM agents for understanding and reasoning, while every action that touches the database or a policy boundary is enforced by deterministic Python — not the model.
+Multi-Agent Task Resolution automates exactly these three issue types end to end, using LLM agents for understanding and reasoning, while every action that touches the database or a policy boundary is enforced by deterministic Python — not the model.
 
-## 2. Why AgentFlow?
+## 2. Why Multi-Agent Task Resolution?
 
 Most LLM-powered support tools work the same way: send the customer's message to a model, and let that model generate whatever answer or action it thinks is appropriate. That's fast to build, but it puts something a support system can't afford — refunds, replacements, escalations — behind a single non-deterministic text generation. The model can misread a policy, invent a detail, or simply be inconsistent between two nearly identical requests.
 
-AgentFlow Support is built on a different assumption: an LLM is good at understanding unstructured text and proposing a next step; Python is good at enforcing rules consistently. So the work is split accordingly, across a structured multi-agent workflow instead of one large prompt:
+Multi-Agent Task Resolution is built on a different assumption: an LLM is good at understanding unstructured text and proposing a next step; Python is good at enforcing rules consistently. So the work is split accordingly, across a structured multi-agent workflow instead of one large prompt:
 
 - **Planner Agent** — reads the customer's message and produces a short investigation approach before any data is touched.
 - **Investigation Agent** — decides which lookup tools are actually needed and gathers evidence (customer, order) using them.
@@ -37,7 +37,7 @@ No agent in this system can directly cause a refund, a replacement, or a databas
 
 ## 3. Architecture
 
-![AgentFlow Architecture](docs/architecture.png)
+![Multi-Agent Task Resolution Architecture](docs/architecture.png)
 
 ```mermaid
 flowchart TD
@@ -154,7 +154,7 @@ See `evaluation/README.md` for scenario breakdown and `evaluation/results.json` 
 ## 10. Project Structure
 
 ```
-AgentFlow Support/
+Multi-Agent-Task-Resolution/
 ├── backend/
 │   ├── app/
 │   │   ├── main.py              # FastAPI app, CORS, startup, /health

@@ -1,4 +1,4 @@
-# AgentFlow Support — Evaluation
+# Multi-Agent Task Resolution — Evaluation
 
 Runs every scenario in `scenarios.json` through the real, compiled LangGraph
 workflow (`run_case`) — real Bedrock calls, real Planner/Investigation/

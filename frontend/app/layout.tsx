@@ -16,8 +16,8 @@ const fontMono = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "AgentFlow Support",
-  description: "Agentic AI customer resolution console",
+  title: "Multi-Agent Task Resolution",
+  description: "Multi-agent AI system for task planning, investigation, reasoning, validation, and resolution",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

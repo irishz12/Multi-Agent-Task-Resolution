@@ -17,7 +17,7 @@ import { useActiveRun } from "@/lib/store";
 function Logo() {
   return (
     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary font-mono text-sm font-semibold text-primary-foreground">
-      A
+      M
     </div>
   );
 }
@@ -47,7 +47,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Logo />
             <div>
-              <h1 className="text-base font-semibold tracking-tight text-foreground">AgentFlow Support</h1>
+              <h1 className="text-base font-semibold tracking-tight text-foreground">Multi-Agent Task Resolution</h1>
               <p className="text-sm text-muted-foreground">Agentic AI Customer Resolution Workflow</p>
             </div>
           </div>
